@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Behavioral;
+using DesignPatterns.Structural;
 
 // Strategy Design Pattern
 
@@ -28,3 +29,15 @@ Console.WriteLine("\n-- Rezi Unsubscribes --\n");
 agency.Unsubscribe(rezi);
 
 agency.PublishNews("Learning Design Patterns!");
+
+
+// Decorator Design Pattern
+
+ICoffee coffee = new BasicCoffee(); 
+Console.WriteLine($"{coffee.GetDescription()} = ${coffee.GetCost()}");
+
+coffee = new MilkDecorator(coffee); 
+Console.WriteLine($"{coffee.GetDescription()} = ${coffee.GetCost()}");
+
+coffee = new SugarDecorator(coffee);
+Console.WriteLine($"{coffee.GetDescription()} = ${coffee.GetCost()}");
