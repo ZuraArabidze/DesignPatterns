@@ -72,3 +72,13 @@ Application app1 = new Application(factory1);
 app1.RenderUI();
 
 Console.WriteLine("-----------------------------");
+
+// Singleton Design Pattern
+
+var singleton1 = Singleton.GetInstance();
+var  singleton2 = Singleton.GetInstance();
+
+singleton1.DoSomething();
+singleton2.DoSomething();
+
+Console.WriteLine($"Same instance? {singleton1 == singleton2}");
