@@ -59,3 +59,16 @@ creator = new PdfDocumentCreator();
 creator.PrintDocument();
 
 Console.WriteLine("-----------------------------");
+
+// Abstract Design Pattern 
+
+IGUIFactory factory = new WindowsFactory();
+IGUIFactory factory1 = new MacFactory();
+
+Application app = new Application(factory);
+app.RenderUI();
+
+Application app1 = new Application(factory1);
+app1.RenderUI();
+
+Console.WriteLine("-----------------------------");
