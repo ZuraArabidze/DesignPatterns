@@ -1,5 +1,7 @@
 ﻿using DesignPatterns.Behavioral;
+using DesignPatterns.Creational;
 using DesignPatterns.Structural;
+using System.Reflection.Metadata;
 
 // Strategy Design Pattern
 
@@ -12,6 +14,7 @@ context.ExecutePayment(400);
 context.SetStrategy(new PayPalPayment());
 context.ExecutePayment(800);
 
+Console.WriteLine("-----------------------------");
 
 // Observer Design Pattern
 
@@ -30,6 +33,7 @@ agency.Unsubscribe(rezi);
 
 agency.PublishNews("Learning Design Patterns!");
 
+Console.WriteLine("-----------------------------");
 
 // Decorator Design Pattern
 
@@ -41,3 +45,17 @@ Console.WriteLine($"{coffee.GetDescription()} = ${coffee.GetCost()}");
 
 coffee = new SugarDecorator(coffee);
 Console.WriteLine($"{coffee.GetDescription()} = ${coffee.GetCost()}");
+
+Console.WriteLine("-----------------------------");
+
+// Factory Design Pattern
+
+DocumentCreator creator;
+
+creator = new WordDocumentCreator();
+creator.PrintDocument();
+
+creator = new PdfDocumentCreator();
+creator.PrintDocument();
+
+Console.WriteLine("-----------------------------");
