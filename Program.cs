@@ -82,3 +82,25 @@ singleton1.DoSomething();
 singleton2.DoSomething();
 
 Console.WriteLine($"Same instance? {singleton1 == singleton2}");
+
+Console.WriteLine("-----------------------------");
+
+// Command Design Pattern
+
+var light = new Light();
+
+var turnOn = new TurnOnCommand(light);
+var turnOff = new TurnOffCommand(light);
+
+var remote = new RemoteControl();
+
+remote.SetCommand(turnOn);
+remote.PressButton();    
+remote.PressUndo();   
+
+remote.SetCommand(turnOff);
+remote.PressButton();
+remote.PressUndo();
+
+
+Console.WriteLine("-----------------------------");
