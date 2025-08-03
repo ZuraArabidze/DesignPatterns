@@ -130,3 +130,16 @@ Console.WriteLine();
 theater.EndMovie();
 
 Console.WriteLine("-----------------------------");
+
+// Proxy Design Pattern 
+
+IImage image1 = new ProxyImage("photo1.jpg");
+
+Console.WriteLine("Image not loaded yet...");
+Console.WriteLine("Now displaying image...");
+image1.Display();
+
+Console.WriteLine("\nDisplaying again...");
+image1.Display();
+
+Console.WriteLine("-----------------------------");
