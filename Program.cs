@@ -114,3 +114,19 @@ Console.WriteLine("Adaptee interface is incompatible with the client.");
 Console.WriteLine("But with adapter client can call it's method.");
 
 Console.WriteLine(target.GetRequest());
+
+Console.WriteLine("-----------------------------");
+
+// Facade Design Pattern
+
+var dvd = new DvdPlayer();
+var projector = new Projector();
+var sound = new SoundSystem();
+var lights = new Lights();
+
+var theater = new HomeTheaterFacade(dvd, projector, sound, lights);
+theater.WatchMovie("Inception");
+Console.WriteLine();
+theater.EndMovie();
+
+Console.WriteLine("-----------------------------");
