@@ -41,14 +41,14 @@ all its dependents (observers) are notified and updated automatically.
 
 **Real-world analogy**:  
 Think of a YouTube channel:
--You (the subscriber) subscribe to a channel (the subject).
--When the channel uploads a new video, you get notified.
--The channel doesn’t care who you are; it just broadcasts updates.
+- You (the subscriber) subscribe to a channel (the subject).
+- When the channel uploads a new video, you get notified.
+- The channel doesn’t care who you are; it just broadcasts updates.
 
 **When to use it**:
--When changes in one object need to automatically trigger updates in other objects.
--To implement event systems, notifications, or data binding.
--To decouple the object that produces data (subject) from those that consume it (observers).
+- When changes in one object need to automatically trigger updates in other objects.
+- To implement event systems, notifications, or data binding.
+- To decouple the object that produces data (subject) from those that consume it (observers).
 
 ## Decorator Pattern
 
@@ -63,9 +63,9 @@ Espresso → + Milk → + Caramel
 Each topping wraps the original drink, adding new behavior (like price or ingredients).
 
 **When to use it**:
--You want to add responsibilities to individual objects, not an entire class.
--You want to follow the Open/Closed Principle — extend behavior without modifying the existing code.
--Subclassing would lead to an explosion of subclasses for every combination.
+- You want to add responsibilities to individual objects, not an entire class.
+- You want to follow the Open/Closed Principle — extend behavior without modifying the existing code.
+- Subclassing would lead to an explosion of subclasses for every combination.
 
 ## Factory Method Pattern
 
@@ -75,14 +75,14 @@ Define an interface for creating an object, but let subclasses alter the type of
 **Real-world analogy**:
 Imagine a logistics company with different transport modes:
 
--Truck for road logistics
--Ship for sea logistics
--Each subclass decides which product (transport) to instantiate.
+- Truck for road logistics
+- Ship for sea logistics
+- Each subclass decides which product (transport) to instantiate.
 
 **When to use it**:
--You want to delegate the responsibility of instantiating objects to subclasses.
--The exact type of object isn't known until runtime.
--You want to follow the Single Responsibility Principle by separating object creation from its usage.
+- You want to delegate the responsibility of instantiating objects to subclasses.
+- The exact type of object isn't known until runtime.
+- You want to follow the Single Responsibility Principle by separating object creation from its usage.
 
 ## Abstract Factory Pattern
 
@@ -92,16 +92,16 @@ Provide an interface for creating families of related or dependent objects witho
 **Real-world analogy**:
 Think of a UI toolkit that can switch between Light and Dark themes. Each theme provides:
 
--Buttons
--Textboxes
--Scrollbars
+- Buttons
+- Textboxes
+- Scrollbars
 
 All components must match the theme (family of products).
 
 **When to use it**:
--You need to ensure that related products are used together.
--You want to isolate the creation of families of objects.
--You want to follow the Dependency Inversion Principle — depend on abstractions, not concrete classes
+- You need to ensure that related products are used together.
+- You want to isolate the creation of families of objects.
+- You want to follow the Dependency Inversion Principle — depend on abstractions, not concrete classes
 
 ## Singleton Pattern
 
@@ -113,5 +113,5 @@ Think of a president of a country — at any given time, there should only be on
 No matter how many people refer to “the president,” it always points to the same individual.
 
 **When to use it**:
--You need exactly one instance of a class, shared across the system (e.g. configuration manager, logging, caching).
--You want controlled access to the instance.
+- You need exactly one instance of a class, shared across the system (e.g. configuration manager, logging, caching).
+- You want controlled access to the instance.
