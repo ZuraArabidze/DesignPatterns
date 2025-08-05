@@ -116,6 +116,23 @@ No matter how many people refer to “the president,” it always points to the 
 - You need exactly one instance of a class, shared across the system (e.g. configuration manager, logging, caching).
 - You want controlled access to the instance.
 
+## Command Pattern
+
+**Intent**:
+Encapsulate a request as an object, thereby letting you parameterize clients with different requests, 
+queue or log requests, and support undoable operations.
+
+**Real-world analogy**:
+Think of a remote control. Each button on the remote is programmed to perform a specific action on a device (like turning on the TV, changing volume). 
+The button doesn't care how the action is performed — it just "commands" the device.
+
+**When to use it**:
+- You want to parameterize objects with operations.
+- You need to queue or schedule requests.
+- You want to support undo/redo operations.
+- You want to decouple the sender of a request from its receiver.
+
+
 ## Adapter Pattern
 
 **Intent**:
@@ -145,3 +162,17 @@ Instead of manually controlling your TV, DVD player, and sound system separately
 - You have a complex system with many subsystems and want to provide a simple entry point.
 - You want to decouple clients from the internal complexity of a library or framework.
 - You want to layer your subsystems and reduce coupling between layers.
+
+## Proxy Pattern
+
+**Intent**:
+Provide a surrogate or placeholder for another object to control access to it.
+
+**Real-world analogy**:
+Think of a credit card as a proxy for a bank account. When you use your card, it doesn’t directly access your money. 
+Instead, it acts as a middleman, checking permissions and then performing the transaction on your behalf.
+
+**When to use it**:
+- You want to add a layer of control over access to an object (e.g. lazy loading, access control, logging, etc.).
+- You need to defer the creation and initialization of an expensive object until it's actually needed.
+- You want to add functionality to existing classes without modifying their code (e.g. caching, logging).
