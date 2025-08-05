@@ -115,3 +115,33 @@ No matter how many people refer to “the president,” it always points to the 
 **When to use it**:
 - You need exactly one instance of a class, shared across the system (e.g. configuration manager, logging, caching).
 - You want controlled access to the instance.
+
+## Adapter Pattern
+
+**Intent**:
+Convert the interface of a class into another interface clients expect.
+Adapter lets classes work together that couldn’t otherwise due to incompatible interfaces.
+
+**Real-world analogy**:
+Think of a power socket adapter.
+You have a European plug, but you're in the US. You use an adapter so the plug fits the US socket — without changing the plug or the socket.
+
+**When to use it**:
+- You want to reuse existing classes, but their interfaces are incompatible with the rest of your code.
+- You want to bridge between legacy code and new implementations.
+- You’re working with third-party libraries that can’t be modified.
+
+## Facade Pattern
+
+**Intent**:
+provides a unified interface to a set of interfaces in a subsystem. 
+Facade defines a higherlevel interface that makes the subsystem easier to use.
+
+**Real-world analogy**:
+Think of a universal remote control.
+Instead of manually controlling your TV, DVD player, and sound system separately, the remote offers a simplified interface to manage them all.
+
+**When to use it**:
+- You have a complex system with many subsystems and want to provide a simple entry point.
+- You want to decouple clients from the internal complexity of a library or framework.
+- You want to layer your subsystems and reduce coupling between layers.
