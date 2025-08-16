@@ -143,3 +143,21 @@ Console.WriteLine("\nDisplaying again...");
 image1.Display();
 
 Console.WriteLine("-----------------------------");
+
+// Bridge Design Pattern
+
+var raster = new RasterRenderer();
+var vector = new VectorRenderer();
+
+Shape circle1 = new Circle(raster, 5);
+Shape circle2 = new Circle(vector, 10);
+Shape square1 = new Square(raster, 4);
+Shape square2 = new Square(vector, 7);
+
+circle1.Draw();   
+circle2.Draw();   
+square1.Draw();   
+square2.Draw();
+
+
+Console.WriteLine("-----------------------------");

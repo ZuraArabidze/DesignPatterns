@@ -176,3 +176,17 @@ Instead, it acts as a middleman, checking permissions and then performing the tr
 - You want to add a layer of control over access to an object (e.g. lazy loading, access control, logging, etc.).
 - You need to defer the creation and initialization of an expensive object until it's actually needed.
 - You want to add functionality to existing classes without modifying their code (e.g. caching, logging).
+
+## Bridge Pattern
+
+**Intent**:
+Decouple an abstraction from its implementation so that the two can vary independently.
+
+**Real-world analogy**:
+A TV remote and the TV. The remote is the abstraction, and the TV is the implementation. 
+You can have different remotes for the same TV or different TVs for the same remote — they evolve independently.
+
+**When to use it**:
+- You want to avoid a class explosion from combining multiple dimensions of variation.
+- You want to be able to change both abstraction and implementation independently.
+- You want to follow the Open/Closed Principle — add new variants without modifying existing code.
