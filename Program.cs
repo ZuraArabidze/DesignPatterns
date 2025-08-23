@@ -161,3 +161,15 @@ square2.Draw();
 
 
 Console.WriteLine("-----------------------------");
+
+// Template Method Design Pattern
+DataParser csv = new CsvParser();
+csv.ProcessData();
+
+Console.WriteLine();
+
+DataParser json = new JsonParser();
+json.ProcessData();
+
+
+Console.WriteLine("-----------------------------");

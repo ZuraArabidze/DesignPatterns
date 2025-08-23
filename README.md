@@ -190,3 +190,24 @@ You can have different remotes for the same TV or different TVs for the same rem
 - You want to avoid a class explosion from combining multiple dimensions of variation.
 - You want to be able to change both abstraction and implementation independently.
 - You want to follow the Open/Closed Principle — add new variants without modifying existing code.
+
+## Template Method
+
+**Intent**:
+Define the skeleton of an algorithm in an operation, deferring some steps tosubclass es.Template Method lets subclass es redefine certain ste ps of an algorithm
+without changing the algorithm's structure.
+
+**Real-world analogy**:
+Think of preparing coffee or tea:
+
+1.Boil water
+2.Brew coffee/tea
+3.Pour into cup
+4.Add condiments (sugar, milk, etc.)
+
+The overall process is fixed, but the brewing and condiments steps differ depending on the beverage.
+
+**When to use it**:
+- You want to enforce a specific sequence of steps in an algorithm.
+- You want subclasses to provide implementation for only some steps, not the whole algorithm.
+- You want to promote code reuse by keeping common algorithm logic in a single place.
