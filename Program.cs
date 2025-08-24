@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Behavioral;
 using DesignPatterns.Creational;
 using DesignPatterns.Structural;
+using DesignPatterns.Structural.Composite;
 using System.Reflection.Metadata;
 
 // Strategy Design Pattern
@@ -149,10 +150,10 @@ Console.WriteLine("-----------------------------");
 var raster = new RasterRenderer();
 var vector = new VectorRenderer();
 
-Shape circle1 = new Circle(raster, 5);
-Shape circle2 = new Circle(vector, 10);
-Shape square1 = new Square(raster, 4);
-Shape square2 = new Square(vector, 7);
+Shape circle1 = new DesignPatterns.Structural.Circle(raster, 5);
+Shape circle2 = new DesignPatterns.Structural.Circle(vector, 10);
+Shape square1 = new DesignPatterns.Structural.Square(raster, 4);
+Shape square2 = new DesignPatterns.Structural.Square(vector, 7);
 
 circle1.Draw();   
 circle2.Draw();   
@@ -171,5 +172,19 @@ Console.WriteLine();
 DataParser json = new JsonParser();
 json.ProcessData();
 
+
+Console.WriteLine("-----------------------------");
+
+//Composite Design Pattern
+var circle = new DesignPatterns.Structural.Composite.Circle();
+var square = new DesignPatterns.Structural.Composite.Square();
+
+var group = new CompoundGraphic();
+group.Add(circle);
+group.Add(square);
+
+circle.Draw();
+square.Draw();
+group.Draw();
 
 Console.WriteLine("-----------------------------");

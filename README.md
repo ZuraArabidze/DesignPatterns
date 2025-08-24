@@ -191,7 +191,7 @@ You can have different remotes for the same TV or different TVs for the same rem
 - You want to be able to change both abstraction and implementation independently.
 - You want to follow the Open/Closed Principle — add new variants without modifying existing code.
 
-## Template Method
+## Template Method Pattern
 
 **Intent**:
 Define the skeleton of an algorithm in an operation, deferring some steps tosubclass es.Template Method lets subclass es redefine certain ste ps of an algorithm
@@ -211,3 +211,28 @@ The overall process is fixed, but the brewing and condiments steps differ depend
 - You want to enforce a specific sequence of steps in an algorithm.
 - You want subclasses to provide implementation for only some steps, not the whole algorithm.
 - You want to promote code reuse by keeping common algorithm logic in a single place.
+
+## Composite Pattern
+
+**Intent**:
+The Composite Pattern lets you treat individual objects and compositions of objects uniformly.
+It’s used to represent part-whole hierarchies where a single object (leaf) or a collection of objects (composite) should be handled the same way.
+
+**Real-world analogy**:
+Imagine a company hierarchy:
+- A Manager can have employees reporting to them (other managers or regular workers).
+- An Employee might not have subordinates.
+- You want to calculate total salary or print all employee names without caring whether it’s a manager or a worker — you call the same method!
+
+This is what Composite makes easy:
+- Leaf nodes = Simple elements (employees without subordinates).
+- Composite nodes = Containers of other nodes (managers).
+
+**When to use it**:
+- You have hierarchical tree structures (files & folders, GUI widgets, org charts).
+- You want to treat single objects and groups of objects in the same way.
+- You want to avoid writing conditional logic like if (isLeaf) ... else ... everywhere.
+- You want polymorphism to simplify client code.
+
+
+
