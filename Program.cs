@@ -188,3 +188,33 @@ square.Draw();
 group.Draw();
 
 Console.WriteLine("-----------------------------");
+
+//Iterator Design Pattern
+SongCollection songs = new SongCollection();
+songs.AddSong(new Song("Shape of You", "Ed Sheeran"));
+songs.AddSong(new Song("Believer", "Imagine Dragons"));
+
+IIterator<Song> songIterator = songs.CreateIterator();
+Console.WriteLine("SongCollection:");
+while (songIterator.HasNext())
+{
+    Song song = songIterator.Next();
+    Console.WriteLine($"{song.Title} - {song.Artist}");
+}
+
+Console.WriteLine();
+
+
+PlaylistCollection playlist = new PlaylistCollection(3);
+playlist.AddSong(new Song("Thunderstruck", "AC/DC"));
+playlist.AddSong(new Song("Smells Like Teen Spirit", "Nirvana"));
+
+IIterator<Song> playlistIterator = playlist.CreateIterator();
+Console.WriteLine("PlaylistCollection:");
+while (playlistIterator.HasNext())
+{
+    Song song = playlistIterator.Next();
+    Console.WriteLine($"{song.Title} - {song.Artist}");
+}
+
+Console.WriteLine("-----------------------------");

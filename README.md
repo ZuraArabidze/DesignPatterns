@@ -234,5 +234,16 @@ This is what Composite makes easy:
 - You want to avoid writing conditional logic like if (isLeaf) ... else ... everywhere.
 - You want polymorphism to simplify client code.
 
+## Iterator Pattern
 
+**Intent**:
+The Iterator Pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+**Real-world analogy**:
+
+
+**When to use it**:
+- When you want to decouple collection classes from traversal logic.
+- When you need multiple ways to traverse a collection (forward, backward, etc.).
+- When you need a uniform interface to iterate over different collections.
 
