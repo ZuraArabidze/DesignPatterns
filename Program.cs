@@ -218,3 +218,13 @@ while (playlistIterator.HasNext())
 }
 
 Console.WriteLine("-----------------------------");
+
+// State Design Pattern
+var player = new MusicPlayer();
+
+player.Play();   
+player.Pause();  
+player.Play();   
+player.Stop();
+
+Console.WriteLine("-----------------------------");

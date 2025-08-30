@@ -252,3 +252,22 @@ Imagine you have a remote control for your TV.
 - When you need multiple ways to traverse a collection (forward, backward, etc.).
 - When you need a uniform interface to iterate over different collections.
 
+## State Pattern
+
+**Intent**:
+The State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+**Real-world analogy**:
+Think of a vending machine.
+
+- If it’s Out of Stock, pressing buttons won’t dispense anything.
+- If it’s Waiting for Money, it won’t give items until you insert money.
+- Once Money Inserted, it will let you pick your item.
+
+The vending machine’s behavior changes depending on its state.
+
+**When to use it**:
+- When an object’s behavior depends on its state.
+- To avoid massive if-else or switch statements for different states.
+- To encapsulate logic for each state separately.
+
