@@ -240,7 +240,12 @@ This is what Composite makes easy:
 The Iterator Pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
 **Real-world analogy**:
+Imagine you have a remote control for your TV.
 
+- The TV channels are like elements in a collection.
+- The remote control’s channel buttons (next/previous) are like an iterator.
+- You don’t need to know how the TV stores the channels internally; you just press next to go to the next channel or previous to go back.
+- The Iterator Pattern hides the internal structure of the collection while letting you step through elements one at a time.
 
 **When to use it**:
 - When you want to decouple collection classes from traversal logic.
