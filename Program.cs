@@ -150,10 +150,10 @@ Console.WriteLine("-----------------------------");
 var raster = new RasterRenderer();
 var vector = new VectorRenderer();
 
-Shape circle1 = new DesignPatterns.Structural.Circle(raster, 5);
-Shape circle2 = new DesignPatterns.Structural.Circle(vector, 10);
-Shape square1 = new DesignPatterns.Structural.Square(raster, 4);
-Shape square2 = new DesignPatterns.Structural.Square(vector, 7);
+DesignPatterns.Structural.Shape circle1 = new DesignPatterns.Structural.Circle(raster, 5);
+DesignPatterns.Structural.Shape circle2 = new DesignPatterns.Structural.Circle(vector, 10);
+DesignPatterns.Structural.Shape square1 = new DesignPatterns.Structural.Square(raster, 4);
+DesignPatterns.Structural.Shape square2 = new DesignPatterns.Structural.Square(vector, 7);
 
 circle1.Draw();   
 circle2.Draw();   
@@ -257,3 +257,23 @@ Car suvCar = suvBuilder.GetResult();
 Console.WriteLine(suvCar);
 
 Console.WriteLine("-----------------------------");
+
+// Prototype Design Pattern
+var originalShape = new DesignPatterns.Creational.Shape { Color = "Red", X = 10, Y = 20 };
+var originalCircle = new DesignPatterns.Creational.Circle { Color = "Blue", Radius = 5.5 };
+
+var clonedShape = originalShape.Clone();
+var clonedCircle = originalCircle.Clone();
+
+clonedShape.Color = "Green";
+clonedCircle.Radius = 10;
+
+Console.WriteLine("Originals:");
+Console.WriteLine(originalShape);
+Console.WriteLine(originalCircle);
+
+Console.WriteLine("\nClones:");
+Console.WriteLine(clonedShape);
+Console.WriteLine(clonedCircle);
+
+Console.WriteLine("-----------------------------"); 

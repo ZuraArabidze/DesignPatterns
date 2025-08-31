@@ -303,3 +303,19 @@ The **house (Product)** is always built step by step—foundation, walls, roof.
 - When objects are complex with multiple optional parameters.  
 - When you want to reuse the construction process for different representations.  
 - When you want to hide the complexity of object creation from the client.
+
+## Prototype Pattern
+
+**Intent:**  
+Specify the kinds of objects to crea te using a prototypical instance, and create new objects by copying this prototype.
+
+**Real-World Analogy:**  
+Think of a document template:
+Instead of writing a document from scratch every time, you copy an existing template and make small changes.
+The template is your "prototype," and every new document is a clone.
+
+**When to Use:** 
+- When creating a new object is costly or resource-intensive (e.g., object with heavy initialization or database calls).
+- When you want to avoid subclass proliferation by cloning a preconfigured object.
+- When objects are similar but differ in a few properties.
+- When you want to store and copy object configurations at runtime.
