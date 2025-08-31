@@ -242,3 +242,18 @@ Console.WriteLine(customer2.GetName());
 customer2.PlaceOrder("Tee");
 
 Console.WriteLine("-----------------------------");
+
+// Builder Design Pattern
+var director = new CarDirector();
+
+var sportsBuilder = new SportsCarBuilder();
+director.Construct(sportsBuilder);
+Car sportsCar = sportsBuilder.GetResult();
+Console.WriteLine(sportsCar);
+
+var suvBuilder = new SUVCarBuilder();
+director.Construct(suvBuilder);
+Car suvCar = suvBuilder.GetResult();
+Console.WriteLine(suvCar);
+
+Console.WriteLine("-----------------------------");

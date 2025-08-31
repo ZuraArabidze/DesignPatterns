@@ -287,3 +287,19 @@ Imagine you’re watching Netflix.
 **When to use it**:
 - When you have lots of conditional null checks scattered in your code.
 - When you want to simplify client code and follow polymorphism principles.
+
+## Builder Pattern
+
+**Intent:**  
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+
+**Real-World Analogy:**  
+Think of building a house. The **architect (Director)** creates a standard plan.  
+Different **contractors (Builders)** follow the same plan but build different types of houses  
+(luxury villa vs. small house).  
+The **house (Product)** is always built step by step—foundation, walls, roof.
+
+**When to Use:**  
+- When objects are complex with multiple optional parameters.  
+- When you want to reuse the construction process for different representations.  
+- When you want to hide the complexity of object creation from the client.
