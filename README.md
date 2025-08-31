@@ -271,3 +271,19 @@ The vending machine’s behavior changes depending on its state.
 - To avoid massive if-else or switch statements for different states.
 - To encapsulate logic for each state separately.
 
+## Null Object Pattern
+
+**Intent**:
+Provide an object as a surrogate for the absence of a real object.
+Instead of returning null and forcing client code to do null checks, we return a neutral "do-nothing" object that implements the same interface.
+
+**Real-world analogy**:
+Imagine you’re watching Netflix.
+
+- When you log in, Netflix shows your personalized homepage.
+- If you haven’t created a profile yet, instead of crashing or showing an error, Netflix shows a “Guest” profile.
+- You can still browse content, but recommendations are generic, and some features might not work.
+
+**When to use it**:
+- When you have lots of conditional null checks scattered in your code.
+- When you want to simplify client code and follow polymorphism principles.

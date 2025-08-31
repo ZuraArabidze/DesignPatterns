@@ -228,3 +228,17 @@ player.Play();
 player.Stop();
 
 Console.WriteLine("-----------------------------");
+
+// Null Object Design Pattern
+var repo = new CustomerRepository();
+
+ICustomer customer1 = repo.GetCustomer("Zura");
+ICustomer customer2 = repo.GetCustomer("Zura3");
+
+Console.WriteLine(customer1.GetName());
+customer1.PlaceOrder("Coffee");
+
+Console.WriteLine(customer2.GetName()); 
+customer2.PlaceOrder("Tee");
+
+Console.WriteLine("-----------------------------");
