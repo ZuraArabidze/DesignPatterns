@@ -307,7 +307,7 @@ The **house (Product)** is always built step by step—foundation, walls, roof.
 ## Prototype Pattern
 
 **Intent:**  
-Specify the kinds of objects to crea te using a prototypical instance, and create new objects by copying this prototype.
+Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
 
 **Real-World Analogy:**  
 Think of a document template:
@@ -319,3 +319,21 @@ The template is your "prototype," and every new document is a clone.
 - When you want to avoid subclass proliferation by cloning a preconfigured object.
 - When objects are similar but differ in a few properties.
 - When you want to store and copy object configurations at runtime.
+
+## Mediator Pattern
+
+**Intent:**
+Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring 
+to each other explicitly, and it lets you vary their interaction independently.
+
+**Real-World Analogy:**
+Think of an air traffic control tower:
+
+- Planes (colleagues) don’t communicate directly with each other.
+- Instead, each plane communicates with the control tower (mediator).
+- The control tower coordinates takeoffs, landings, and flight paths.
+
+**When to Use:**
+- When you have a complex network of interactions between objects.
+- To reduce coupling between objects.
+- To make components easier to reuse in other systems.
