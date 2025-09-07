@@ -337,3 +337,19 @@ Think of an air traffic control tower:
 - When you have a complex network of interactions between objects.
 - To reduce coupling between objects.
 - To make components easier to reuse in other systems.
+
+## Memento Pattern
+
+**Intent**:  
+Capture and externalize an object’s internal state without violating encapsulation, so it can be restored later.
+
+**Real-world analogy**:  
+Think about the **Undo feature in text editors**. Every time you type, the editor saves a snapshot (memento).  
+When you hit "Undo," the editor restores the text to a previous snapshot.  
+You don’t need to know how the text is stored internally — the editor just restores it.
+
+**When to use it**:
+- You need **undo/redo** functionality.
+- You want to **checkpoint system states** and roll back when needed.
+- You want to preserve **encapsulation** — the caretaker (history manager) should not depend on the object’s internal state.
+
